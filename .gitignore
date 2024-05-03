@@ -1,3 +1,6 @@
+# Ignoring venv
+venv/
+
 # Logs
 logs
 *.log
