@@ -21,9 +21,21 @@ app.get('/', (req, res) => {
 // Example POST request
 app.post('/submit', (req, res) => {
     const data = req.body; // Access POST data
-    // Process the data...
-    res.send('Data received: ' + JSON.stringify(data));
-});
+  
+    // Convert the data to JSON string
+    const jsonData = JSON.stringify(data);
+  
+    // Write data to a text file named messages.txt
+    fs.appendFile('messages.txt', jsonData + '\n', (err) => {
+      if (err) {
+        console.error('Error writing to file:', err);
+        res.status(500).send('Error saving data');
+      } else {
+        console.log('Data written to file successfully:', jsonData);
+        res.send('Data received and saved successfully!');
+      }
+    });
+  });
 
 // Start the server
 const PORT = process.env.PORT || 3000; // Use port from environment variable or 3000
