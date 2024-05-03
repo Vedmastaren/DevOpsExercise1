@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakta oss</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Kontakta oss</h1>
+    <form id="messageForm">
+        <label for="messageInput">Skriv ditt meddelande här:</label>
+        <textarea id="messageInput" name="messageInput" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Skicka</button>
+    </form>
+
+    <script>
+        // Hämta formuläret och textarean
+        const form = document.getElementById('messageForm');
+        const messageInput = document.getElementById('messageInput');
+
+        // Lyssna på inlämning av formuläret
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Förhindra att formuläret skickas till servern
+
+            // Hämta meddelandet från textarean
+            const message = messageInput.value;
+
+            // Skicka meddelandet till en backend eller e-postadress (detta är ett exempel)
+            alert('Meddelandet skickades: ' + message);
+
+            // Återställ textarean
+            messageInput.value = '';
+        });
+    </script>
+</body>
+</html>
