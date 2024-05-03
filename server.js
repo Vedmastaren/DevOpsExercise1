@@ -14,8 +14,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Define routes
 // Example GET request
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.status(200).json({message: "Hello, world!"})
 });
+
 
 // Example POST request
 app.post('/submit', (req, res) => {
