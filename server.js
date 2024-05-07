@@ -33,11 +33,11 @@ app.post('/submit', (req, res) => {
   // Write data to a text file named messages.txt
   fs.writeFile('messages.txt', jsonData + '\n', { flag: 'a+' }, (err) => {
     if (err) {
-      console.error('Error writing to file:', err);
-      res.status(500).send('Error saving data');
+      console.error('Could not write to file:', err);
+      res.status(500).send('Could not save the data');
     } else {
-      console.log('Data written to file successfully:', jsonData);
-      res.send('Data received and saved successfully!');
+      console.log('Successfully wrote:', jsonData);
+      res.send('Everything works!');
     }
   });
 });
