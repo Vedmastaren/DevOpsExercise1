@@ -1,4 +1,4 @@
-# Ignoring venv
+# gitignore venv
 venv/
 
 # Logs

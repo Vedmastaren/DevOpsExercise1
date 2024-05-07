@@ -1,0 +1,20 @@
+/* Style for the body */
+body {
+    background-color: #c7d8e4; /* Ljusblå bakgrund */
+    font-family: Arial, sans-serif;
+}
+
+/* Stil för knappen */
+button {
+    margin-top: 10px; /* Lite extra utrymme ovanför knappen */
+    padding: 8px 16px; /* Lite större padding för att öka storleken på knappen */
+}
+
+/* Style for the header */
+header {
+    background-color: #333;
+    color: #030303;
+    padding: 10px 0;
+    text-align: center;
+}
+
