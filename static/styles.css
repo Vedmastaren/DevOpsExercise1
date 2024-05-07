@@ -8,6 +8,10 @@ body {
 button {
     margin-top: 10px; /* Lite extra utrymme ovanför knappen */
     padding: 8px 16px; /* Lite större padding för att öka storleken på knappen */
+    border: none;
+    background-color: #0097b2;
+    color: white;
+    border-radius: 5px;
 }
 
 /* Style for the header */
