@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 // Middleware to parse URL-encoded form data
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static(__dirname + '/static'));
+
+
 // Define routes
 // Example GET request
 app.get('/', (req, res) => {
